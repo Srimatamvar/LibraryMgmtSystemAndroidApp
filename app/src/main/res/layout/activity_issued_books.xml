@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:id="@+id/drawer_layout"
+    tools:context=".IssuedBooks">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+        <include
+            layout="@layout/main_toolbar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issued Books"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Student Email"
+            android:textColor="@color/textColor"
+            android:layout_margin="20dp"
+            android:id="@+id/studentName"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/style_for_add_new_user"
+            android:paddingLeft="30dp"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/bookName"
+            android:layout_height="60dp"
+            android:hint="Book Name"
+            android:background="@drawable/style_for_add_new_user"
+            android:textColor="@color/textColor"
+            android:layout_margin="20dp"
+            android:paddingLeft="30dp"/>
+
+
+        <EditText
+            android:id="@+id/issuedDate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="date"
+            android:background="@drawable/style_for_add_new_user"
+            android:textColor="@color/textColor"
+            android:hint="Issued Date (DD/MM/YYYY)"
+            android:layout_margin="20dp"
+            android:paddingLeft="30dp"/>
+
+        <EditText
+            android:id="@+id/returnDate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="date"
+            android:background="@drawable/style_for_add_new_user"
+            android:textColor="@color/textColor"
+            android:hint="Return Date (DD/MM/YYYY)"
+            android:layout_margin="20dp"
+            android:paddingLeft="30dp"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/issuedBtn"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/success_button"
+            android:text="Issued"/>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/backgroundColor">
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

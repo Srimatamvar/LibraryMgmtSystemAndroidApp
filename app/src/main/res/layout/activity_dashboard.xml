@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:id="@+id/drawer_layout"
+    tools:context=".Dashboard">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <include
+            layout="@layout/main_toolbar"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/bookcover"
+            android:src="@drawable/ic_image_black_24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image by Pressing Image Icon"
+            android:textColor="@color/textColor"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+
+        </TextView>
+        <EditText
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:hint="Type Book Name"
+            android:textColor="@color/textColor"
+            android:id="@+id/bookname"
+            android:background="@drawable/style_for_add_new_user"
+            android:padding="20dp"
+            />
+        <EditText
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:hint="Author"
+            android:background="@drawable/style_for_add_new_user"
+            android:id="@+id/author"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/textColor"
+            android:padding="20dp"
+            />
+        <EditText
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:hint="Quantity"
+            android:id="@+id/quantity"
+            android:layout_marginTop="20dp"
+            android:inputType="phone"
+            android:background="@drawable/style_for_add_new_user"
+            android:textColor="@color/textColor"
+            android:padding="20dp"
+            />
+
+        <Button
+            android:id="@+id/addbtn"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/success_button"
+            android:text="Add new"
+            android:textColor="@color/textColor" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/backgroundColor">
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
